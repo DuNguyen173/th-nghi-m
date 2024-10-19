@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Câu hỏi Yes/No</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            text-align: center;
+            margin-top: 50px;
+            background-image: url('https://example.com/image.jpg'); /* file:///Users/duynguyen/Desktop/ANH.jpeg */
+            background-size: cover; /* Ảnh nền bao phủ toàn bộ trang */
+            background-position: center; /* Ảnh căn giữa */
+            background-repeat: no-repeat; /* https://www.bing.com/images/search?q=anh%20cute&FORM=IQFRBA&id=83C88D9D674EDFC9042C2EA3A5EE15F2E035498E */
+        }
+        button {
+            font-size: 18px;
+            padding: 10px 20px;
+            margin: 10px;
+            cursor: pointer;
+        }
+        #noButton {
+            position: absolute;
+        }
+    </style>
+</head>
+<body>
+
+    <h1>Thy có xấu xí không?</h1>
+    <button id="yesButton">Yes</button>
+    <button id="noButton">No</button>
+
+    <script>
+        const noButton = document.getElementById('noButton');
+
+        noButton.addEventListener('mouseover', () => {
+            const x = Math.random() * (window.innerWidth - noButton.offsetWidth);
+            const y = Math.random() * (window.innerHeight - noButton.offsetHeight);
+            noButton.style.left = `${x}px`;
+            noButton.style.top = `${y}px`;
+        });
+
+        document.getElementById('yesButton').addEventListener('click', () => {
+            alert('sao bạn lại nghĩ Thy như thế!');
+        });
+    </script>
+
+</body>
+</html>
